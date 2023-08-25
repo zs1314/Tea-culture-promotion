@@ -1,0 +1,10 @@
+<!--components/tea-header/tea-header.wxml-->
+<view class="header">
+      <navigator url="/pages/index/index" class="logo">
+          <image src="/images/logo.jpg" mode="heightFix" class="pic"/>
+      </navigator>
+
+      <view class="search">
+        <van-icon name="phone-o" bindtap="clickPhone"/>
+      </view>
+</view>

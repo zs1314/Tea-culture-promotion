@@ -1,0 +1,50 @@
+<!--pages/proDetail/proDetail.wxml-->
+<tea-header></tea-header>
+
+<view style="padding:50rpx 30rpx; min-height: 50vh;" wx:if="{{!detail}}">
+  <van-skeleton title row="5" />
+</view>
+
+<view class="detail" wx:else>
+  <view class="banner">
+    <image src="{{detail.picpath}}"></image>
+  </view>
+
+  <view class="textMain">
+    <view class="title">
+      {{detail.title}}
+    </view>
+    <view class="text">
+    
+      <view class="row">
+          <view class="left"><text space="emsp">货 号：</text></view>
+          <view class="right">{{detail.pronum}}</view>
+        </view>
+
+        <view class="row">
+          <view class="left"><text space="emsp">等 级：</text></view>
+          <view class="right">{{detail.grade}}</view>
+        </view>
+
+        <view class="row">
+          <view class="left"><text space="emsp">年 份：</text></view>
+          <view class="right">{{detail.year}}</view>
+        </view>
+
+        <view class="row">
+          <view class="left"><text space="emsp">净含量：</text></view>
+          <view class="right">{{detail.weight}}</view>
+        </view>
+
+        <view class="row">
+          <view class="left"><text space="emsp">零售价：</text></view>
+          <view class="right">{{detail.price}}</view>
+        </view>
+
+    </view>
+  </view>
+</view>
+
+
+<tea-footer></tea-footer>
+

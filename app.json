@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/classify/classify",
+    "pages/news/news",
+    "pages/newsDetail/newsDetail",
+    "pages/proDetail/proDetail"
+  ],
+  "window":{
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "茶美文化馆",
+    "navigationBarTextStyle":"white"
+  },
+
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "color": "#4C4D4E",
+    "selectedColor": "#BDA066",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "首页",
+      "iconPath": "images/home.png",
+      "selectedIconPath": "images/home-fill.png"
+    },{
+      "pagePath": "pages/classify/classify",
+      "text": "分类",
+      "iconPath": "images/all.png",
+      "selectedIconPath": "images/all-fill.png"
+    },{
+      "pagePath": "pages/news/news",
+      "text": "咨询",
+      "iconPath": "images/news.png",
+      "selectedIconPath": "images/news-fill.png"
+    }]
+  },
+  "usingComponents": {
+    "tea-header":"/components/tea-header/tea-header",
+    "tea-news-item":"/components/tea-news-item/tea-news-item",
+    "van-button": "vant-weapp/button",
+    "van-icon": "vant-weapp/icon/index",
+    "tea-footer":"/components/tea-footer/tea-footer",
+    "van-loading": "vant-weapp/loading/index",
+    "van-tab": "vant-weapp/tab/index",
+    "van-tabs": "vant-weapp/tabs/index",
+    "tea-product-item":"/components/tea-product-item/tea-product-item"
+    }
+} 

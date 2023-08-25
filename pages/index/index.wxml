@@ -1,0 +1,96 @@
+<tea-header></tea-header>
+<!-- 轮播图 -->
+<view class="banner">
+    <swiper previous-margin="30rpx" 	
+    circular 
+    autoplay 
+    interval="3000"
+    indicator-dots
+    indicator-color="#BDA066" 
+    indicator-active-color="rgba(214,124,223,10)">
+        <swiper-item>
+            <image src="/images/banner0.jpg" mode=""/>
+        </swiper-item>
+
+        <swiper-item>
+            <image src="/images/banner1.jpg" mode=""/>
+        </swiper-item>
+
+        <swiper-item>
+            <image src="/images/banner2.jpg" mode=""/>
+        </swiper-item>
+
+        <swiper-item>
+            <image src="/images/banner3.jpg" mode=""/>
+        </swiper-item>
+
+    </swiper>
+</view>
+
+<!-- 中间的导航栏 -->
+<view class="scrollNav">
+    <scroll-view scroll-x>
+
+        <navigator open-type="reLaunch" 
+        url="/pages/classify/classify?idx={{index}}" 
+        class="item" wx:for="{{navArr}}" wx:key="_id">
+            <view class="pic">
+                <image src="{{item.icon}}" mode=""/>
+            </view>
+
+            <view class="text">
+                  {{item.classname}}
+            </view>
+        </navigator>
+
+    </scroll-view>
+</view>
+
+<!-- 茶美文化馆的介绍 -->
+<view class="about">
+    <!-- 头部 -->
+    <view class="pubTitle">
+        <view class="en">
+            introduce
+        </view>
+        <view class="cn">
+            茶美文化馆简介
+        </view>
+        <view class="line">
+        </view>
+    </view>
+
+    <!-- 内容 -->
+    <view class="content">
+      <view class="row">白茶，素为茶中珍品，历史悠久，属中国六大茶类之一，具有极高的收藏价值。巷子深茶美文化馆，位于泉城济南，是一家致力于弘扬茶美文化，集白茶销售、品牌、体验、品鉴于一体的综合性企业。</view>
+      <view class="row">巷子深茶美文化馆，传承卓越，与美共勉，以中式传统风格为基础，结合现代时尚格调，将观赏性与实用性、商务与休闲、体验与收藏高度融合，为顾客提供全新的体验式服务。茶舍环境优雅，可以茶会友、修身养性、品鉴收藏，感受白茶独特的文化魅力。</view>
+      <view class="row">从白茶的栽培管理到茶窖存储，每一款产品都诠释着我们追求完美的品质之心，我们拥有最佳的仓储环境，全系列白茶产品，优质的客户服务，致力于打造创新发展、诚信经营的新标杆。</view>
+    </view>
+</view> 
+
+<!-- 新闻价绍 -->
+<view class="news">
+  <!-- 头部 -->
+  <view class="pubTitle">
+        <view class="en">
+            News
+        </view>
+        <view class="cn">
+            新闻资讯
+        </view>
+        <view class="line">
+        </view>
+  </view>
+
+  <!-- 内容 -->
+  <view class="content">
+      <view class="box" wx:for="{{newsArr}}" wx:key="index">
+          <!-- 该组件向这个自定义组件传递参数 -->
+          <tea-news-item item="{{item}}"></tea-news-item>
+      </view>
+  </view>
+</view>
+
+<!-- 客服按钮 -->
+<tea-footer>
+</tea-footer>

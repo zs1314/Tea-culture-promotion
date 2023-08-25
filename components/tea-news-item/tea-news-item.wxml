@@ -1,0 +1,28 @@
+<!--components/tea-news-item/tea-news-item.wxml-->
+<navigator url="/pages/newsDetail/newsDetail?id={{item._id}}" class="newsitem">
+    <!--左边的图片  -->
+    <view class="pic">
+        <image src="{{item.picurl}}" mode="aspectFill" class="img"/>
+    </view>
+    <!-- 右边的一些文字 -->
+    <view class="text">
+        <view class="title">
+            {{item.title}}
+        </view>
+        <!-- 右下角的三个提示栏 -->
+        <view class="info">
+            <view class="block">
+              <van-icon name="clock-o" size="14"/>
+              <text>{{item.publish_date}}</text>
+            </view>
+            <view class="block">
+              <van-icon name="eye-o"  size="14"/>
+              <text>{{item.view_count}}</text>
+            </view>
+            <view class="block">
+              <van-icon name="user-o"  size="14"/>
+              <text>{{item.author}}</text>
+            </view>
+        </view>
+    </view>
+</navigator>

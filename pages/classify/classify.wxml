@@ -1,0 +1,30 @@
+<tea-header></tea-header>
+<view class="banner">
+  <image class="pic" src="/images/teaBanner.jpg" mode="aspectFill"/>
+</view>
+<view class="nav">
+  <van-tabs 
+  border
+  color="#BDA066"
+  title-active-color="#BDA066"
+  active="{{ navactive }}"
+  id="myTabs"
+  bind:click="navChange"
+  >
+    <van-tab  title="{{item.classname}}" wx:key="_id" wx:for="{{navArr}}"></van-tab>    
+  </van-tabs>
+</view>
+
+<view class="content">
+    <view class="body">
+      <view class="box" wx:for="{{proArr}}" wx:key="_id">
+        <tea-product-item item="{{item}}"></tea-product-item>
+      </view>
+    </view>
+    <view class="loadOut">
+      <van-loading size="24px" wx:if="{{loading}}">加载中...</van-loading>
+      <view class="noData" wx:if="{{isData}}">没有更多数据了~</view>
+    </view>
+</view>
+
+<tea-footer></tea-footer>

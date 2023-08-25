@@ -1,0 +1,60 @@
+/* 全局的样式设置 */
+
+view,text{
+    /* 保证padding时向内走,不向外走 */
+    box-sizing: border-box;
+}
+
+/* 全局变量的颜色（但json中不能用） */
+page{
+  /* 把一些常用颜色放在一起,用变量使用,也便于项目修改 */
+  --themeColor: #BDA066;
+  --globalColor: #1a1b1c;
+  --focusColor: #4c4d4e;
+  --descColor: #7e8081;
+  --greyColor:#8e8e8e;
+  --subColor: #b1b2b3;
+  --lightColor:#e4e4e4;
+  --globalBgColor1: #e3e4e5;
+  --globalBgColor2: #f6f7f8;
+  --globalBgColor3: #ffffff;
+}
+
+/* 首页的文化馆介绍的头部(属于公共) */
+.pubTitle{
+    text-align: center;
+}
+/* 英文部分 */
+.pubTitle .en{
+    font-size: 86rpx;
+    /* 加粗 */
+    font-weight: 900;
+    /* 转为大写 */
+    text-transform: uppercase;
+    color: var(--globalColor);
+    /* 透明度 */
+    opacity: 0.1;
+}
+/* 中文部分 */
+.pubTitle .cn{
+  font-size: 56rpx;
+  /* 加粗 */
+  font-weight: 900;
+  /* 向上移动 */
+  transform: translateY(-60rpx);
+}
+/* 一条线 */
+.pubTitle .line{
+  width: 100rpx;
+  height: 5rpx;
+  /* 这里其实相当把高度压缩，再加个背景颜色 */
+  background: var(--globalColor);
+  /* 透明度 */
+  opacity: 0.7;
+  /* 居中 */
+  display: inline-block;
+  text-align: center;
+  /* 向上移动 */
+  transform: translateY(-40rpx);
+}
+

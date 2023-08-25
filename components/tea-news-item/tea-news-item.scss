@@ -1,0 +1,48 @@
+.newsitem{
+  display: flex;
+  justify-content: space-betweens;
+  padding-bottom: 30rpx;
+  .pic{
+      width: 220rpx;
+      height: 150rpx;
+      .img{
+        width: 100%;
+        height: 100%;
+      }
+  }
+  .text{
+      width: 440rpx;
+      height: 150rpx;
+      // 指将各个模块在一行展示
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .title{
+        line-height: 1.4em;
+        color: var(--globalColor);
+        font-size: 32rpx;
+        // 超过两行用省略号
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+      }
+      .info{
+        // 将三个小块放在一行
+        display: flex;
+        // 均匀分隔开来
+        justify-content: space-between;
+        color: var(--descColor);
+        .block{
+          display: flex;
+          align-items: center;
+        }
+        van-icon{
+          color: var(--descColor);
+          margin-right: 6rpx;
+        }
+      }
+  }
+  
+}

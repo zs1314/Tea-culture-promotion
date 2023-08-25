@@ -1,0 +1,15 @@
+<!--pages/news/news.wxml-->
+<tea-header></tea-header>
+<view class="news">
+    <view class="content">
+        <view class="box" wx:for="{{newsArr}}" wx:key="_id">
+          <tea-news-item item="{{item}}"></tea-news-item>
+        </view>
+    </view>
+    <view class="loadOut">
+        <van-loading size="24px" wx:if="{{loading}}">加载中...</van-loading>
+        <view class="noData" wx:else="">
+            没有更多数据
+        </view>
+    </view>
+</view>

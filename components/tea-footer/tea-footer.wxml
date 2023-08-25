@@ -1,0 +1,6 @@
+<!--components/tea-footer/tea-footer.wxml-->
+<view class="kefu">
+    <button class="btn" open-type="contact">1</button>
+    <image src="/images/kefu.png" mode="aspectFill" class="pic"/>
+    <view class="line"></view>
+</view>
